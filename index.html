@@ -3,54 +3,47 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cristeta Comerford | Colorful Tribute</title>
+<title>Cristeta Comerford | Blue & White Tribute</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
     :root {
-        /* Vibrant palette inspired by Philippine festivals */
-        --primary: #ff6b6b;   /* Coral */
-        --secondary: #ffe66d; /* Sun Yellow */
-        --accent: #4ecdc4;   /* Turquoise */
-        --accent-dark: #1a535c; /* Deep Teal */
-        --purple: #b087ff;   /* Lavender */
-        --bg: #fffcec;       /* Light Cream */
-        --text: #222222;
+        --primary: #0d47a1;     /* Dark Blue */
+        --secondary: #64b5f6;   /* Light Blue */
+        --accent: #1976d2;      /* Medium Blue */
+        --text-dark: #0a0a0a;
+        --bg: #ffffff;          /* White */
+        --footer-bg: #0d47a1;
+        --footer-text: #ffffff;
     }
     *, *::before, *::after { box-sizing: border-box; }
     body {
         margin: 0;
         font-family: 'Poppins', sans-serif;
         background: var(--bg);
-        color: var(--text);
+        color: var(--text-dark);
         line-height: 1.6;
     }
-    /* ---------- HEADER ---------- */
     header {
         background: linear-gradient(135deg, var(--primary), var(--accent));
         color: #ffffff;
         text-align: center;
         padding: 5rem 1rem 6rem;
-        position: relative;
     }
     header h1 {
         font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
         font-weight: 700;
         letter-spacing: 1px;
         margin-bottom: 0.5rem;
-        animation: fadeSlide 1s ease-out;
     }
     header p {
         font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
         font-weight: 300;
         opacity: 0.9;
-        animation: fadeSlide 1.2s ease-out;
     }
-
-    /* ---------- NAV ---------- */
     nav {
-        background: var(--accent-dark);
+        background: var(--accent);
         display: flex;
         justify-content: center;
         gap: 1.2rem;
@@ -70,63 +63,52 @@
     nav a:focus {
         opacity: 0.75;
     }
-
-    /* ---------- MAIN ---------- */
     main {
         max-width: 1000px;
-        margin: -4rem auto 0; /* lift main upward into header curve */
+        margin: -4rem auto 0;
         padding: 0 1rem 3rem;
     }
     section {
-        padding: 3.5rem 2rem;
+        padding: 3rem 2rem;
         border-radius: 1.25rem;
         margin-bottom: 2.5rem;
         box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        animation: fadeUp 0.8s ease both;
     }
     section:nth-of-type(odd) {
-        background: var(--secondary);
+        background: #e3f2fd; /* very light blue */
     }
     section:nth-of-type(even) {
-        background: var(--purple);
-        color: #ffffff;
+        background: #bbdefb; /* another light blue */
     }
     section h2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+        color: var(--primary);
     }
     ul {
         padding-left: 1.4rem;
     }
     li { margin-bottom: 0.5rem; }
-
     blockquote {
         border-left: 6px solid var(--primary);
-        background: rgba(255,255,255,0.6);
+        background: #f0f8ff;
         padding: 1rem 1.5rem;
         margin: 1.5rem 0 0;
         font-style: italic;
         border-radius: 0.5rem;
     }
-    section:nth-of-type(even) blockquote {
-        background: rgba(255,255,255,0.15);
-    }
-
-    /* ---------- FOOTER ---------- */
     footer {
-        background: var(--accent-dark);
-        color: #ffffff;
+        background: var(--footer-bg);
+        color: var(--footer-text);
         text-align: center;
         padding: 1.5rem 1rem;
         font-size: 0.9rem;
     }
-
-    /* ---------- BUTTON ---------- */
     .btn-top {
         position: fixed;
         bottom: 1rem;
         right: 1rem;
-        background: var(--primary);
+        background: var(--accent);
         color: #fff;
         border: none;
         padding: 0.7rem 1rem;
@@ -142,22 +124,8 @@
         opacity: 1;
         pointer-events: auto;
     }
-
-    /* ---------- ANIMATIONS ---------- */
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(40px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeSlide {
-        from { opacity: 0; transform: translateY(-20px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-    html {
-        scroll-behavior: smooth;
-    }
 </style>
 <script>
-    // Back-to-top button logic
     window.addEventListener('scroll', () => {
         const btn = document.getElementById('topBtn');
         if (window.scrollY > 300) {
@@ -186,7 +154,6 @@
     </nav>
 
     <main>
-        <!-- ABOUT -->
         <section id="about">
             <h2>About Chef Cris</h2>
             <p>On <strong>August 15, 2005</strong>, Cristeta Pacia Comerford made history as the <em>first woman, Asian, and Filipino</em> to serve as Executive Chef at the White House. Her journey from Manila to Washington D.C. is a testament to skill, grace under pressure, and the power of representation.</p>
@@ -195,7 +162,6 @@
             </blockquote>
         </section>
 
-        <!-- CAREER -->
         <section id="career">
             <h2>Career Highlights</h2>
             <ul>
@@ -206,12 +172,11 @@
             </ul>
         </section>
 
-        <!-- FAMILY -->
         <section id="family">
             <h2>Family &amp; Culinary Roots</h2>
             <p>Cris credits her culinary instincts to her mother, who effortlessly fed a blended family of 11 children. Today, the Comerford household keeps the tradition alive:</p>
             <ul>
-                <li><strong>Danielle</strong>, her daughter, prepared a four‑course Mother’s Day meal at age eight.</li>
+                <li><strong>Danielle</strong>, her daughter, prepared a four-course Mother’s Day meal at age eight.</li>
                 <li><strong>John</strong>, her husband and fellow chef, stepped back from his own career to support Cris and nurture their daughter.</li>
             </ul>
             <blockquote>
@@ -219,10 +184,9 @@
             </blockquote>
         </section>
 
-        <!-- FILIPINO FLAVOR -->
         <section id="filipino">
             <h2>Filipino Flavor in the White House</h2>
-            <p>Chef Cris loves blending Filipino flavors into classic dishes—think <strong>adobo‑stuffed roulades</strong> or hints of <strong>longganisa</strong> in small bites. At home, a rule stands: if a dish takes more than ten minutes, it’s too much work!</p>
+            <p>Chef Cris loves blending Filipino flavors into classic dishes—think <strong>adobo-stuffed roulades</strong> or hints of <strong>longganisa</strong> in small bites. At home, a rule stands: if a dish takes more than ten minutes, it’s too much work!</p>
             <p>Breakfast favorites include:</p>
             <ul>
                 <li><em>Tocino</em></li>
@@ -232,12 +196,11 @@
             </ul>
         </section>
 
-        <!-- FUTURE -->
         <section id="future">
             <h2>Looking Ahead</h2>
             <p>Many call her career the pinnacle, but Chef Comerford sees only stepping stones:</p>
             <blockquote>
-                “Every task—menial or grand—deserves the best of your God‑given ability. There is no real pinnacle, only the next opportunity to serve.”
+                “Every task—menial or grand—deserves the best of your God-given ability. There is no real pinnacle, only the next opportunity to serve.”
             </blockquote>
         </section>
     </main>
