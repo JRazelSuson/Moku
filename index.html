@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cristeta Comerford | Blue & White Tribute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary: #0047ab;     /* Blue */
+        --secondary: #e6f0ff;   /* White Tint */
+        --accent: #0073e6;      /* Bright Blue */
+        --text-dark: #002147;
+        --bg: #ffffff;          /* White */
+        --footer-bg: #0047ab;
+        --footer-text: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg);
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+    header {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #ffffff;
+        text-align: center;
+        padding: 5rem 1rem 6rem;
+    }
+    header h1 {
+        font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+    header p {
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+        font-weight: 300;
+        opacity: 0.9;
+    }
+    nav {
+        background: var(--accent);
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 0.85rem 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+        opacity: 0.75;
+    }
+    main {
+        max-width: 1000px;
+        margin: -4rem auto 0;
+        padding: 0 1rem 3rem;
+    }
+    section {
+        padding: 3rem 2rem;
+        border-radius: 1.25rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    section:nth-of-type(odd) {
+        background: var(--secondary);
+    }
+    section:nth-of-type(even) {
+        background: #d9eaff; /* lighter blue */
+    }
+    section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+    }
+    ul {
+        padding-left: 1.4rem;
+    }
+    li { margin-bottom: 0.5rem; }
+    blockquote {
+        border-left: 6px solid var(--primary);
+        background: #f0f8ff;
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0 0;
+        font-style: italic;
+        border-radius: 0.5rem;
+    }
+    footer {
+        background: var(--footer-bg);
+        color: var(--footer-text);
+        text-align: center;
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    .btn-top {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 0.7rem 1rem;
+        border-radius: 9999px;
+        font-size: 1.25rem;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+    .btn-top.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
+<script>
+    window.addEventListener('scroll', () => {
+        const btn = document.getElementById('topBtn');
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+    function scrollTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</head>
+<body>
+    <header>
+        <h1>Cristeta Pasia Comerford</h1>
+        <p>First Woman &amp; First Minority Executive Chef of the White House</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#career">Career</a>
+        <a href="#family">Family</a>
+        <a href="#filipino">Filipino Flavor</a>
+        <a href="#future">Future</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Chef Cris</h2>
+            <p>On <strong>August 15, 2005</strong>, Cristeta Pacia Comerford made history as the <em>first woman, Asian, and Filipino</em> to serve as Executive Chef at the White House. Her journey from Manila to Washington D.C. is a testament to skill, grace under pressure, and the power of representation.</p>
+            <blockquote>
+                “I Googled myself and articles in many languages said the same thing – <em>the White House chef is female</em>. It was surreal, not just for me but for every young culinarian out there.”
+            </blockquote>
+        </section>
+
+        <section id="career">
+            <h2>Career Highlights</h2>
+            <ul>
+                <li><strong>Executive Chef, White House (2005–2025).</strong></li>
+                <li>Crafts menus for events from intimate dinners to <em>state banquets</em> for royalty and Congressional picnics for 3,000.</li>
+                <li>Chosen from <strong>450 applicants</strong>; her flawless state dinner for the Indian Prime Minister doubled as her audition, silently judged by First Lady Laura Bush.</li>
+                <li>Balances the demands of a <em>living museum</em> with the comfort of the First Family.</li>
+            </ul>
+        </section>
+
+        <section id="family">
+            <h2>Family &amp; Culinary Roots</h2>
+            <p>Cris credits her culinary instincts to her mother, who effortlessly fed a blended family of 11 children. Today, the Comerford household keeps the tradition alive:</p>
+            <ul>
+                <li><strong>Danielle</strong>, her daughter, prepared a four-course Mother’s Day meal at age eight.</li>
+                <li><strong>John</strong>, her husband and fellow chef, stepped back from his own career to support Cris and nurture their daughter.</li>
+            </ul>
+            <blockquote>
+                “Whatever you’re working for, you work to share with your family.”
+            </blockquote>
+        </section>
+
+        <section id="filipino">
+            <h2>Filipino Flavor in the White House</h2>
+            <p>Chef Cris loves blending Filipino flavors into classic dishes—think <strong>adobo-stuffed roulades</strong> or hints of <strong>longganisa</strong> in small bites. At home, a rule stands: if a dish takes more than ten minutes, it’s too much work!</p>
+            <p>Breakfast favorites include:</p>
+            <ul>
+                <li><em>Tocino</em></li>
+                <li><em>Longganisa</em></li>
+                <li><em>Corned beef</em></li>
+                <li><em>Garlic fried rice</em></li>
+            </ul>
+        </section>
+
+        <section id="future">
+            <h2>Looking Ahead</h2>
+            <p>Many call her career the pinnacle, but Chef Comerford sees only stepping stones:</p>
+            <blockquote>
+                “Every task—menial or grand—deserves the best of your God-given ability. There is no real pinnacle, only the next opportunity to serve.”
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Filipino &amp; Proud Series. Crafted with ♥ for educational purposes.
+    </footer>
+
+    <button id="topBtn" class="btn-top" onclick="scrollTop()" title="Back to top">↑</button>
+</body>
+</html>
